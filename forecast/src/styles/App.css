@@ -25,6 +25,19 @@ color: #0e0d0d;
 
 }
 
+.clear
+{
+  border-radius: 30px;
+  background-color: rgba(219, 14, 14, 0.562);
+  width: 70px;
+  text-align: center;
+  margin-top: 7px;
+}
+
+.clear:hover
+{
+  background-color: red;
+}
 .unit-toggle label {
   margin: 0 10px;
 }
