@@ -1,0 +1,75 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #0e0d0d;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image:url("https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Ffreebie.photography%2Fnature%2Fcloudy_blue_sky.jpg&f=1&nofb=1&ipt=2f67526affe8698975cf20558ed1a35d8203653b9677c83b4efd610ebb6ce99e&ipo=images");/* url('https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.torontocitylife.com%2Fwp-content%2Fuploads%2F2011%2F04%2Frainy-1024.jpg&f=1&nofb=1&ipt=9bb12bb9a3023bb6998df9adb4849c6aba1809af7bef659b9627380b81377d5e&ipo=images');*/
+  background-repeat:no-repeat;
+background-size:cover;
+background-position:center;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+  background-color: #213547;
+  color: #f9f9f9;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}

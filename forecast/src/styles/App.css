@@ -1,0 +1,81 @@
+/* src/styles/App.css */
+.app {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+  
+color: #0e0d0d;
+}
+
+.weather-form 
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.weather-form input,
+.weather-form button {
+  padding: 10px;
+  margin: 5px;
+}
+
+.unit-toggle {
+  margin-top: 10px;
+
+}
+
+.unit-toggle label {
+  margin: 0 10px;
+}
+
+.weather-details,
+.weather-forecast {
+  margin: 20px 0;
+}
+.inner
+{
+  background-color: rgb(214, 228, 240,0.527);
+  border-radius: 12px;
+  min-width: max-content;
+  padding: 10px;
+
+
+}
+.weather-summary
+{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+.weather-forecast
+{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.forecast-day {
+  margin: 12px;
+  padding: 10px;
+  background-color: rgba(214, 228, 240, 0.527);
+  border-radius: 12px;
+  min-width: max-content;
+  padding: 10px;
+}
+
+.error {
+  color: red;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .weather-forecast { flex-direction: column; 
+   } 
+ } 
+ @media (min-width: 768px) { 
+ .weather-forecast {
+  flex-direction: row; 
+   } 
+ }
+
