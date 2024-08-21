@@ -24,7 +24,6 @@ function App() {
     setForecast(null);
     setUnit('metric');
     setError('');
-    setCity('');
   };
   const fetchWeather = async (city, unit) => {
     try {
