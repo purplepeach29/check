@@ -17,6 +17,15 @@ function App() {
   const [unit, setUnit] = useState('metric');
   const [error, setError] = useState('');
 
+  const handleClear = (e) => {
+    e.preventDefault();
+    setWeather(null);
+    setWind(null);
+    setForecast(null);
+    setUnit('metric');
+    setError('');
+    setCity('');
+  };
   const fetchWeather = async (city, unit) => {
     try {
       const weatherResponse = await axios.get(`${BASE_URL}/weather`, {
@@ -62,6 +71,8 @@ function App() {
     <div className="app">
       <WeatherForm onSearch={fetchWeather} onUnitChange={setUnit} />
       {error && <p className="error">{error}</p>}
+      <button className='clear' onClick={handleClear}>Clear</button> 
+
       <WeatherDetails weather={weather} wind={wind}/>
       <WeatherForecast forecast={forecast} />
     </div>
