@@ -1,6 +1,9 @@
 // src/components/WeatherDetails.js
 import React, { useState, useEffect} from 'react';
-import mist from './mist.jpg';
+import mist from '../assets/mist.jpg';
+import defaultimg from '../assets/default.jpg';
+import rain from '../assets/rain.jpg';
+import haze from '../assets/haze.jpg';
 
 const WeatherDetails = ({ weather, wind }) => {
   if (!weather) return <p> </p>;//No weather data available.
@@ -14,30 +17,30 @@ const WeatherDetails = ({ weather, wind }) => {
 
   const { description = 'No description', icon = '01d' } = weather.weather ? weather.weather[0] : {};
   const { speed = 'N/A', deg = 'N/A' } = wind || {};
-  const [backgroundImage, setBackgroundImage] = useState('default.jpg');
+  const [backgroundImage, setBackgroundImage] = useState(defaultimg);
 
 //console.log(description);
   useEffect(() => {
   if (weather) {
     switch (description) {
-      case 'clear':
+      /*case 'clear':
         setBackgroundImage('clear.jpg');
-        break;
+        break;*/
       case 'clouds':
         setBackgroundImage('clouds.png');
         break;
       case 'haze':
-        setBackgroundImage('haze.jpg');
+        setBackgroundImage(haze);
         break;
       case 'mist':
-        setBackgroundImage('mist.jpg');
+        setBackgroundImage(mist);
         break;
       case 'rain' || description.includes('rain'):
-          setBackgroundImage('rain.jpg');
+          setBackgroundImage(rain);
           break;
       // Add more conditions as needed
       default:
-        setBackgroundImage('default.jpg');
+        setBackgroundImage(defaultimg);
     }
   }
 }, [weather]);
@@ -45,7 +48,7 @@ const WeatherDetails = ({ weather, wind }) => {
     <div className="weather-details">
       <h2>Current Weather</h2>
       <div className="weather-summary">
-        <div className='inner' style={{ backgroundImage: `url(/src/assets/${backgroundImage})` }}> 
+        <div className='inner' style={{ backgroundImage: `url(${backgroundImage})` }}> 
         <img src={`http://openweathermap.org/img/wn/${icon}.png`} alt={description} />
         <p>{description}</p>
         <p>Temperature: {temp}°</p>
