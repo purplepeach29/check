@@ -85,25 +85,26 @@ function App() {
   console.log(weather);
   useEffect(() => {
     if (weather) {
-      switch (weather.weather[0].description) {
+      switch (weather.weather[0].main) {
         /*case 'clear':
           setBackgroundImage('clear.jpg');
           break;*/
-        case 'clouds':
+        case 'Clouds':
           setBackgroundImage(defaultimg);
           break;
-        case 'haze':
+        case 'Haze':
           setBackgroundImage(haze);
           break;
-        case 'mist':
+        case 'Mist':
           setBackgroundImage(mist);
           break;
-        case 'rain' || description.includes('rain'):
-            setBackgroundImage(rain);
-            break;
+        case 'Rain':
+        case 'Thunderstorm': 
+          setBackgroundImage(rain);
+          break;
         // Add more conditions as needed
         default:
-          setBackgroundImage(rain);
+          setBackgroundImage(defaultimg);
       }
     }
   }, [weather]);
