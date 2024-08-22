@@ -25,7 +25,7 @@ const WeatherForm = ({ onSearch, onUnitChange }) => {
         placeholder="Enter city"
         required
       />
-      <button type="submit">Get Weather</button>
+      <button type="submit">🔍</button>
       <div className="unit-toggle">
         <label>
           <input

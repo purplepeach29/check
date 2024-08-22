@@ -6,7 +6,7 @@ const WeatherForecast = ({ forecast }) => {
 
   return (
     <div className="weather-forecast">
-      <h2>5-Day Forecast</h2>
+      <h2>Next 5 days</h2>
       {forecast.map((day, index) => (
         <div key={index} className="forecast-day">
           <h3>{day.date}</h3>

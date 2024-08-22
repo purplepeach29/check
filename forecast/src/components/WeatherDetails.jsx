@@ -15,14 +15,14 @@ const WeatherDetails = ({ weather, wind }) => {
     humidity = 'N/A'
   } = weather.main;
 
-  const { description = 'No description', icon = '01d' } = weather.weather ? weather.weather[0] : {};
+  const { main = 'No description', icon = '01d' } = weather.weather ? weather.weather[0] : {};
   const { speed = 'N/A', deg = 'N/A' } = wind || {};
   const [backgroundImage, setBackgroundImage] = useState(defaultimg);
-
-//console.log(description);
+  
+  //console.log(description);
   useEffect(() => {
   if (weather) {
-    switch (description) {
+    switch (main) {
       /*case 'clear':
         setBackgroundImage('clear.jpg');
         break;*/
@@ -46,11 +46,12 @@ const WeatherDetails = ({ weather, wind }) => {
 }, [weather]);
   return (
     <div className="weather-details">
-      <h2>Current Weather</h2>
+      <h2></h2>
       <div className="weather-summary">
         <div className='inner' >
-        <img src={`http://openweathermap.org/img/wn/${icon}.png`} alt={description} />
-        <p>{description}</p>
+        <img src={`http://openweathermap.org/img/wn/${icon}.png`} alt={main} />
+        <p></p>
+        <p>{main}</p>
         <p>Temperature: {temp}°</p>
         <p>Min Temperature: {temp_min}°</p>
         <p>Max Temperature: {temp_max}°</p>

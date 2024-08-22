@@ -2,7 +2,6 @@
 .app {
   font-family: Arial, sans-serif;
   text-align: center;
-  padding: 20px;
   width: 100%;
   background-image:url("https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Ffreebie.photography%2Fnature%2Fcloudy_blue_sky.jpg&f=1&nofb=1&ipt=2f67526affe8698975cf20558ed1a35d8203653b9677c83b4efd610ebb6ce99e&ipo=images");
   background-repeat:no-repeat;
@@ -11,6 +10,17 @@ background-position:center;
 color: #0e0d0d;
 min-height: 600px;
 }
+
+.nav
+{
+  background-color: rgb(64 64 217 / 48%);
+  text-align: center;
+  padding: 15px;
+  margin-bottom: 10px;
+  box-shadow: 10px 7px 7px 1px #0a2f4e;
+  
+}
+
 
 .weather-form 
 {

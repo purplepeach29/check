@@ -22,6 +22,8 @@ function App() {
   const [forecast, setForecast] = useState(null);
   const [unit, setUnit] = useState('metric');
   const [error, setError] = useState('');
+  const [city, setCity] = useState('');
+  const [country, setCountry] = useState('');
 
   const [backgroundImage, setBackgroundImage] = useState(back);
 
@@ -32,6 +34,8 @@ function App() {
     setForecast(null);
     setUnit('metric');
     setError('');
+    setCity('');
+    setCountry('');
     setBackgroundImage(back);
   };
 
@@ -69,6 +73,8 @@ function App() {
       setWind(weatherData.wind);
       setForecast(forecastData);
       setError('');
+      setCity(weatherData.name);
+      setCountry(weatherData.sys.country)
     } catch (err) {
       setError('City not found or error fetching data');
       setWeather(null);
@@ -104,10 +110,14 @@ function App() {
 
   return (
     <div className="app" style={{ backgroundImage: `url(${backgroundImage})` }}>
+      <div className='nav'>
+        <h2>WASSERFORECAST</h2>
+      </div>
+    
       <WeatherForm onSearch={fetchWeather} onUnitChange={setUnit} />
       {error && <p className="error">{error}</p>}
       <button className='clear' onClick={handleClear}>Clear</button> 
-
+      <h2>{city} {country}</h2>
       <WeatherDetails weather={weather} wind={wind}/>
       <WeatherForecast forecast={forecast} />
     </div>
