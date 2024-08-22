@@ -5,6 +5,10 @@ import './index.css'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
+    <div className='nav'>
+        <h2>WASSERFORECAST</h2>
+      </div>
+      
     <App />
   </StrictMode>,
 )

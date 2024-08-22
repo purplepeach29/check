@@ -11,10 +11,25 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image:url("https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Ffreebie.photography%2Fnature%2Fcloudy_blue_sky.jpg&f=1&nofb=1&ipt=2f67526affe8698975cf20558ed1a35d8203653b9677c83b4efd610ebb6ce99e&ipo=images");/* url('https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.torontocitylife.com%2Fwp-content%2Fuploads%2F2011%2F04%2Frainy-1024.jpg&f=1&nofb=1&ipt=9bb12bb9a3023bb6998df9adb4849c6aba1809af7bef659b9627380b81377d5e&ipo=images');*/
+  background-image:url("https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Ffreebie.photography%2Fnature%2Fcloudy_blue_sky.jpg&f=1&nofb=1&ipt=2f67526affe8698975cf20558ed1a35d8203653b9677c83b4efd610ebb6ce99e&ipo=images");
   background-repeat:no-repeat;
 background-size:cover;
 background-position:center;
+}
+
+.nav
+{
+  background-color: rgb(64 64 217 / 48%);
+  text-align: center;
+  padding: 15px;
+  box-shadow: 10px 7px 7px 1px #0a2f4e;
+  
+}
+
+h2
+{
+  margin-top: 0%;
+  color: #000;
 }
 
 a {
@@ -28,8 +43,8 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
+  /*display: flex;
+  place-items: center;*/
   min-width: 320px;
   min-height: 100vh;
   
