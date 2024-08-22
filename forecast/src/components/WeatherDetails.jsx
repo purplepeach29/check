@@ -48,7 +48,7 @@ const WeatherDetails = ({ weather, wind }) => {
     <div className="weather-details">
       <h2>Current Weather</h2>
       <div className="weather-summary">
-        <div className='inner' style={{ backgroundImage: `url(${backgroundImage})` }}> 
+        <div className='inner' >
         <img src={`http://openweathermap.org/img/wn/${icon}.png`} alt={description} />
         <p>{description}</p>
         <p>Temperature: {temp}°</p>

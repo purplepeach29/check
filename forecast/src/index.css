@@ -11,10 +11,7 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image:url("https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Ffreebie.photography%2Fnature%2Fcloudy_blue_sky.jpg&f=1&nofb=1&ipt=2f67526affe8698975cf20558ed1a35d8203653b9677c83b4efd610ebb6ce99e&ipo=images");
-  background-repeat:no-repeat;
-background-size:cover;
-background-position:center;
+  
 }
 
 .nav
@@ -25,7 +22,6 @@ background-position:center;
   box-shadow: 10px 7px 7px 1px #0a2f4e;
   
 }
-
 h2
 {
   margin-top: 0%;
