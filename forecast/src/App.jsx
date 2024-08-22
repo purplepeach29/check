@@ -64,7 +64,7 @@ function App() {
         .map(item => ({
           date: new Date(item.dt * 1000).toLocaleDateString(),
           temp: item.main.temp.toFixed(1),
-          description: item.weather[0].description,
+          description: item.weather[0].main,
           icon: item.weather[0].icon,
         }));
        
@@ -109,6 +109,7 @@ function App() {
   }, [weather]);
   
 const display = city? city+ ", "+country: '';
+
   return (
     <div className="app" style={{ backgroundImage: `url(${backgroundImage})` }}>
       <div className='nav'>
