@@ -47,18 +47,24 @@ min-height: 600px;
 
 }
 
+.place
+{
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
 .clear
 {
   border-radius: 30px;
-  background-color: rgba(219, 14, 14, 0.562);
+  background-color: rgba(18, 30, 199, 0.219);
   width: 20px;
   text-align: center;
-  margin-top: 7px;
+  margin: 7px;
 }
 
 .clear:hover
 {
-  background-color: red;
+  background-color: rgb(168, 13, 13);
 }
 .unit-toggle label {
   margin: 0 0px;

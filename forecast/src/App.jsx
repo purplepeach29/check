@@ -34,8 +34,8 @@ function App() {
     setForecast(null);
     setUnit('metric');
     setError('');
-    setCity('');
-    setCountry('');
+    setCity(null);
+    setCountry(null);
     setBackgroundImage(back);
   };
 
@@ -107,7 +107,8 @@ function App() {
       }
     }
   }, [weather]);
-
+  
+const display = city? city+ ", "+country: '';
   return (
     <div className="app" style={{ backgroundImage: `url(${backgroundImage})` }}>
       <div className='nav'>
@@ -116,8 +117,10 @@ function App() {
     
       <WeatherForm onSearch={fetchWeather} onUnitChange={setUnit} />
       {error && <p className="error">{error}</p>}
-      <button className='clear' onClick={handleClear}>X</button> 
-      <h2>{city} {country}</h2>
+      <div className='place'>
+        <h2>{display}</h2>
+        <button className='clear' onClick={handleClear}>X</button> 
+      </div>
       <WeatherDetails weather={weather} wind={wind}/>
       <WeatherForecast forecast={forecast} />
     </div>
