@@ -116,7 +116,7 @@ function App() {
     
       <WeatherForm onSearch={fetchWeather} onUnitChange={setUnit} />
       {error && <p className="error">{error}</p>}
-      <button className='clear' onClick={handleClear}>Clear</button> 
+      <button className='clear' onClick={handleClear}>X</button> 
       <h2>{city} {country}</h2>
       <WeatherDetails weather={weather} wind={wind}/>
       <WeatherForecast forecast={forecast} />

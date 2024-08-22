@@ -28,9 +28,17 @@ min-height: 600px;
   justify-content: center;
   align-items: center;
 }
-.weather-form input,
-.weather-form button {
+.weather-form input
+{
   padding: 10px;
+  border-radius: 12px;
+ 
+  margin: 5px;
+}
+
+.weather-form button {
+  padding: 5px;
+  border-radius: 20px;
   margin: 5px;
 }
 
@@ -43,7 +51,7 @@ min-height: 600px;
 {
   border-radius: 30px;
   background-color: rgba(219, 14, 14, 0.562);
-  width: 80px;
+  width: 20px;
   text-align: center;
   margin-top: 7px;
 }
@@ -53,7 +61,7 @@ min-height: 600px;
   background-color: red;
 }
 .unit-toggle label {
-  margin: 0 10px;
+  margin: 0 0px;
 }
 
 .weather-details,
