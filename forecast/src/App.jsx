@@ -90,7 +90,7 @@ function App() {
           setBackgroundImage('clear.jpg');
           break;*/
         case 'clouds':
-          setBackgroundImage('clouds.png');
+          setBackgroundImage(defaultimg);
           break;
         case 'haze':
           setBackgroundImage(haze);
@@ -103,7 +103,7 @@ function App() {
             break;
         // Add more conditions as needed
         default:
-          setBackgroundImage(defaultimg);
+          setBackgroundImage(rain);
       }
     }
   }, [weather]);
