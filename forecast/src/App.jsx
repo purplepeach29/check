@@ -119,7 +119,7 @@ function App() {
 const display = city? city.toLocaleUpperCase()+ ", "+country: '';
 
   return (
-    <div className="app" style={{ backgroundImage: `url(${backgroundImage})` }}>
+    <div className="app" style={{ backgroundImage: `linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)),url(${backgroundImage})` }}>
       <div className='nav'>
         <h2>WASSERFORECAST</h2>
       </div>
