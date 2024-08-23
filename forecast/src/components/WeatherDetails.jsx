@@ -17,9 +17,8 @@ const WeatherDetails = ({ weather, wind }) => {
 
   const { main = 'No description', icon = '01d' } = weather.weather ? weather.weather[0] : {};
   const { speed = 'N/A', deg = 'N/A' } = wind || {};
-  
+    
   /*const [backgroundImage, setBackgroundImage] = useState(defaultimg);
-  console.log(description);
   useEffect(() => {
   if (weather) {
     switch (main) {
@@ -44,6 +43,9 @@ const WeatherDetails = ({ weather, wind }) => {
     }
   }
 }, [weather]);*/
+  
+//const display = city? city+ ", "+country: '';
+
   return (
     <div className="weather-details">
       <h2></h2>

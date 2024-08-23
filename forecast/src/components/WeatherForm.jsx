@@ -18,7 +18,7 @@ const WeatherForm = ({ onSearch, onUnitChange }) => {
 
   return (
     <form onSubmit={handleSearch} className="weather-form">
-      <input
+      <input className='search-bar'
         type="text"
         value={city}
         onChange={(e) => setCity(e.target.value)}

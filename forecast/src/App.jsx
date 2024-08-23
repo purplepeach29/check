@@ -56,8 +56,8 @@ function App() {
           appid: API_KEY,
         },
       });
-      console.log(weatherResponse.data);
-      console.log(forecastResponse.data);
+     // console.log(weatherResponse.data);
+      //console.log(forecastResponse.data);
 
       const weatherData = weatherResponse.data;
       const forecastData = forecastResponse.data.list.filter((item, index) => index % 8 === 0) // Pick one forecast per day
@@ -82,7 +82,7 @@ function App() {
     }
     
   };
-  console.log(weather);
+  //console.log(weather);
   useEffect(() => {
     if (weather) {
       switch (weather.weather[0].main) {
@@ -118,7 +118,7 @@ const display = city? city+ ", "+country: '';
       </div>
     
       <WeatherForm onSearch={fetchWeather} onUnitChange={setUnit} />
-      {error && <p className="error">{error}</p>}
+      {error && <p className="error">{error}</p>}      
       <div className='place'>
         <h2>{display}</h2>
         <button className='clear' onClick={handleClear}>X</button> 

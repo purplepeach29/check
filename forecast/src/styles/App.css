@@ -5,12 +5,36 @@
   width: 100%;
   background-image:url("https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Ffreebie.photography%2Fnature%2Fcloudy_blue_sky.jpg&f=1&nofb=1&ipt=2f67526affe8698975cf20558ed1a35d8203653b9677c83b4efd610ebb6ce99e&ipo=images");
   background-repeat:no-repeat;
-background-size:cover;
-background-position:center;
-color: #0e0d0d;
-min-height: 600px;
+  background-size:cover;
+  background-position:center;
+  color: #0e0d0d;
+  min-height: 600px;
 }
-
+.weather-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+  position: relative;
+  z-index: 2;
+  color: white;
+}
+.weather-form .search-bar {
+  border: none;
+  padding: 10px 11px;
+  background-color: transparent;
+  color: rgb(250, 246, 246);
+  border-bottom: 1px solid white;
+  font-size: 16px;
+}
+.weather-form .search-bar::placeholder {
+  color: white;
+}
+.search-bar:focus {
+  outline: none;
+  border-bottom: 1px solid gray;
+  transition: all 1s ease-in-out;
+}
 .nav
 {
   background-color: rgb(64 64 217 / 48%);
@@ -18,7 +42,7 @@ min-height: 600px;
   padding: 15px;
   margin-bottom: 10px;
   box-shadow: 10px 7px 7px 1px #0a2f4e;
-  
+  color:white
 }
 
 
@@ -28,13 +52,13 @@ min-height: 600px;
   justify-content: center;
   align-items: center;
 }
-.weather-form input
+/*.weather-form input
 {
   padding: 10px;
   border-radius: 12px;
  
   margin: 5px;
-}
+}*/
 
 .weather-form button {
   padding: 5px;
@@ -49,6 +73,11 @@ min-height: 600px;
 
 .place
 {
+  /*background-color: rgb(214, 228, 240,0.527);
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+  min-width: max-content;*/
   display: flex;
   justify-content: center;
   align-items: baseline;
