@@ -91,7 +91,7 @@
 .clear
 {
   border-radius: 30px;
-  background-color: rgba(18, 30, 199, 0.219);
+  background-color: transparent;
   width: 20px;
   text-align: center;
   margin: 7px;
@@ -99,7 +99,7 @@
 
 .clear:hover
 {
-  background-color: rgb(168, 13, 13);
+  background-color: rgb(13 82 168 / 42%);
 }
 .unit-toggle label {
   margin: 0 0px;

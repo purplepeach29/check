@@ -8,12 +8,12 @@ import mist from './assets/mist.jpg';
 import defaultimg from './assets/default.jpg';
 import rain from './assets/rain.jpg';
 import haze from './assets/haze.jpg';
-import back from './assets/back.jpg';
+import back from './assets/bg.gif';
 
 
 import './styles/App.css';
 
-const API_KEY = '76bde0717dfb4dd252ac6ce284e36507'; // Replace with your API key
+const API_KEY = '76bde0717dfb4dd252ac6ce284e36507'; //Replace with your API key
 const BASE_URL = 'https://api.openweathermap.org/data/2.5';
 
 
@@ -31,6 +31,7 @@ function App() {
 
   const [backgroundImage, setBackgroundImage] = useState(back);
 
+  //reset values, clear screen
   const handleClear = (e) => {
     e.preventDefault();
     setWeather(null);
@@ -86,7 +87,7 @@ function App() {
     }
     
   };
-  //console.log(weather);
+  //set background image according to weather 
   useEffect(() => {
     if (weather) {
       switch (weather.weather[0].main) {
@@ -115,7 +116,7 @@ function App() {
 
 
   
-const display = city? city+ ", "+country: '';
+const display = city? city.toLocaleUpperCase()+ ", "+country: '';
 
   return (
     <div className="app" style={{ backgroundImage: `url(${backgroundImage})` }}>
@@ -128,6 +129,7 @@ const display = city? city+ ", "+country: '';
         <WeatherForm onSearch={fetchWeather} onUnitChange= {setUnit}/>     
         <button className='clear' onClick={handleClear}>X</button> 
         </div>
+        
         <h2 className='place'>{display}</h2>
 
         <WeatherDetails weather={weather} wind={wind}/>
