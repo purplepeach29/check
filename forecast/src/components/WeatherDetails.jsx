@@ -1,10 +1,5 @@
 // src/components/WeatherDetails.js
 import React, { useState, useEffect} from 'react';
-/*import mist from '../assets/mist.jpg';
-import defaultimg from '../assets/default.jpg';
-import rain from '../assets/rain.jpg';
-import haze from '../assets/haze.jpg';*/
-
 const WeatherDetails = ({ weather, wind }) => {
   if (!weather) return <p> </p>;//No weather data available.
 
@@ -18,47 +13,20 @@ const WeatherDetails = ({ weather, wind }) => {
   const { main = 'No description', icon = '01d' } = weather.weather ? weather.weather[0] : {};
   const { speed = 'N/A', deg = 'N/A' } = wind || {};
     
-  /*const [backgroundImage, setBackgroundImage] = useState(defaultimg);
-  useEffect(() => {
-  if (weather) {
-    switch (main) {
-      /*case 'clear':
-        setBackgroundImage('clear.jpg');
-        break;
-      case 'clouds':
-        setBackgroundImage('clouds.png');
-        break;
-      case 'haze':
-        setBackgroundImage(haze);
-        break;
-      case 'mist':
-        setBackgroundImage(mist);
-        break;
-      case 'rain' || description.includes('rain'):
-          setBackgroundImage(rain);
-          break;
-      // Add more conditions as needed
-      default:
-        setBackgroundImage(defaultimg);
-    }
-  }
-}, [weather]);*/
   
-//const display = city? city+ ", "+country: '';
-
   return (
     <div className="weather-details">
-      <h2></h2>
+      <h2>Weather Today</h2>
       <div className="weather-summary">
         <div className='inner' >
         <img src={`http://openweathermap.org/img/wn/${icon}.png`} alt={main} />
         <p></p>
-        <p>{main}</p>
-        <p>Temperature: {temp}°</p>
-        <p>Min Temperature: {temp_min}°</p>
-        <p>Max Temperature: {temp_max}°</p>
-        <p>Humidity: {humidity}%</p>
-        <p>Wind: {speed} m/s, {deg}°</p>
+        <h3>{main}</h3>
+        <h3>Temperature: {temp}°</h3>
+        <h3>Min Temperature: {temp_min}°</h3>
+        <h3>Max Temperature: {temp_max}°</h3>
+        <h3>Humidity: {humidity}%</h3>
+        <h3>Wind: {speed} m/s, {deg}°</h3>
         </div>
       </div>
     </div>

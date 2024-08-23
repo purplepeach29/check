@@ -16,6 +16,10 @@ import './styles/App.css';
 const API_KEY = '76bde0717dfb4dd252ac6ce284e36507'; // Replace with your API key
 const BASE_URL = 'https://api.openweathermap.org/data/2.5';
 
+
+
+//export WeatherForm;
+
 function App() {
   const [weather, setWeather] = useState(null);
   const [wind, setWind] = useState(null);
@@ -108,6 +112,8 @@ function App() {
       }
     }
   }, [weather]);
+
+
   
 const display = city? city+ ", "+country: '';
 
@@ -116,15 +122,23 @@ const display = city? city+ ", "+country: '';
       <div className='nav'>
         <h2>WASSERFORECAST</h2>
       </div>
-    
-      <WeatherForm onSearch={fetchWeather} onUnitChange={setUnit} />
-      {error && <p className="error">{error}</p>}      
-      <div className='place'>
-        <h2>{display}</h2>
+      <div className='layout'>
+      <div className='form'>
+        <div className='box'>
+        <WeatherForm onSearch={fetchWeather} onUnitChange= {setUnit}/>     
         <button className='clear' onClick={handleClear}>X</button> 
+        </div>
+        <h2 className='place'>{display}</h2>
+
+        <WeatherDetails weather={weather} wind={wind}/>
+
       </div>
-      <WeatherDetails weather={weather} wind={wind}/>
+
+      {error && <p className="error">{error}</p>}      
+      
+
       <WeatherForecast forecast={forecast} />
+      </div>
     </div>
   );
 }
