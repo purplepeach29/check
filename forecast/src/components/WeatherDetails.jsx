@@ -6,7 +6,27 @@ import maxtemp from './../assets/maxtemp.png';
 import humidityimg from './../assets/humidity.png';
 import windimg from './../assets/wind.png';
 
-
+function Attribute({
+  image,
+  imgclass='',
+  name,
+  val1,
+  sym1,
+  val2='',
+  sym2=''
+}) {
+  return (
+    <section className="attri">
+      <div className='weather-attri'>
+        <img src={image} className={imgclass}/>   
+        <h3>{name}:</h3> 
+      </div>
+      <div className='sym-val'>  <h3>{val1}{sym1}</h3>
+             <h3>{val2}{sym2}</h3>
+      </div>
+    </section>
+  );
+}
 const WeatherDetails = ({ weather, wind }) => {
   if (!weather) return <p> </p>;//No weather data available.
 
@@ -29,13 +49,42 @@ const WeatherDetails = ({ weather, wind }) => {
         <h3>{main}</h3>
         <div className='inner'>
 
-        <div className='attri'>   
-          <div className='weather-attri'><img src={tempimg}/>   <h3>Temp:</h3> </div><h3>{temp}°</h3></div>
-        <div className='attri'>   
-          <div className='weather-attri'><img src={mintemp}/> <h3>Min. Temp:</h3></div><h3>{temp_min}°</h3></div>
-        <div className='attri'><div className='weather-attri'><img src={maxtemp}/> <h3>Max Temp:</h3></div><h3>{temp_max}°</h3></div>
-        <div className='attri'><div className='weather-attri'><img src={humidityimg} className='humidity'/> <h3> Humidity:</h3></div><h3>{humidity}%</h3></div>
-            <div className='attri'><div className='weather-attri'><img src={windimg} className='wind'/><h3>Wind: </h3></div><h3>{speed} m/s, {deg}°</h3></div>
+      <Attribute
+          image={tempimg}
+          name="Temp"
+          val1={temp} 
+          sym1='°'
+          
+      />
+      <Attribute
+          image={mintemp}
+          name="Min Temp"
+          val1={temp_min}
+          sym1='°'
+      />
+      <Attribute
+          image={maxtemp}
+          name="Max Temp"
+          val1={temp_max}
+          sym1='°'
+      />
+      <Attribute
+          image={humidityimg}
+          imgclass='humidity'
+          name="Humidity"
+          val1={humidity}
+          sym1='%'
+      />
+      <Attribute
+          image={windimg}
+          imgclass='wind'
+          name="Wind"
+          val1={speed}
+          sym1='m/s'
+          val2={deg}
+          sym2='°'
+
+      />
         </div>
       </div>
     </div>

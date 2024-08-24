@@ -180,6 +180,17 @@ h3 > img{
   width:37px;
   height:37px;
 }
+
+.sym-val
+{
+  display: flex;
+}
+
+.sym-val> h3
+{
+  margin-right: 5px;
+
+}
 .box, .layout 
 {
   display: flex;
