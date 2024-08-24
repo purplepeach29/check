@@ -145,15 +145,18 @@
 
 .forecast-day {
   margin: 7px;
-  padding: 10px;
   display: flex;
   justify-content: space-evenly;
   background-color: rgb(117 170 215 / 53%);
   border-radius: 10px;
   min-width: max-content;
-  padding: 10px;
   width: 80%;
 }
+
+/*.forecast-day > h3, .forecast-day > p {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}*/
 
 .error {
   color: red;
