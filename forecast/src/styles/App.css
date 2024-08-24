@@ -144,7 +144,7 @@ img
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 50%;
+  width: 60%;
 }
 
 .attri
@@ -219,6 +219,9 @@ h2
     width: 100%;
    } 
    .form{
+    width: 100%;
+   }
+   .inner{
     width: 100%;
    }
    .layout
