@@ -6,10 +6,10 @@ const WeatherForecast = ({ forecast }) => {
 
   return (
     <div className="weather-forecast">
-      <h2> Upcoming Weather</h2>
+      <h3> Upcoming Weather</h3>
       {forecast.map((day, index) => (
         <div key={index} className="forecast-day">
-          <h3>{day.date}</h3>
+          <p>{day.date}</p>
           <img src={`http://openweathermap.org/img/wn/${day.icon}.png`} alt={day.description} />
           <p>{day.description}</p>
           <p>Average Temp : {day.temp}°</p>

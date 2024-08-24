@@ -154,6 +154,12 @@ img
   align-items: center;
   width: 70%;
 }
+
+.weather-attri
+{
+  display: flex;
+  align-items: center;
+}
 h3 > img{
   margin-right: 10%;
 }
@@ -169,7 +175,7 @@ h3 > img{
 {
   display:flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   margin: 0px 0px;
   margin-left: auto;
@@ -182,19 +188,27 @@ h3 > img{
 .forecast-day {
   margin: 7px;
   display: flex;
-  padding: 10px;
+  padding-top: 10px;
   justify-content: space-evenly;
+  align-items: center;
   background-color: rgb(117 170 215 / 53%);
   border-radius: 10px;
   min-width: max-content;
   width: 80%;
 }
 
-.forecast-day > h3, .forecast-day > p {
+.forecast-day > p {
   margin-top: 0px;
   margin-bottom: 0px;
 }
 
+.forecast-day >img{
+  height: 38px;
+}
+h2
+{
+  margin: 0px;
+}
 .error {
   color: red;
   font-weight: bold;
