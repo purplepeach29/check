@@ -1,5 +1,12 @@
 // src/components/WeatherDetails.js
 import React, { useState, useEffect} from 'react';
+import tempimg from './../assets/temp.png';
+import mintemp from './../assets/mintemp.png';
+import maxtemp from './../assets/maxtemp.png';
+import humidityimg from './../assets/humidity.png';
+import windimg from './../assets/wind.png';
+
+
 const WeatherDetails = ({ weather, wind }) => {
   if (!weather) return <p> </p>;//No weather data available.
 
@@ -18,15 +25,15 @@ const WeatherDetails = ({ weather, wind }) => {
     <div className="weather-details">
       <h2>Weather Today</h2>
       <div className="weather-summary">
-        <div className='inner' >
         <img src={`http://openweathermap.org/img/wn/${icon}.png`} alt={main} />
-        <p></p>
         <h3>{main}</h3>
-        <h3>Temperature: {temp}°</h3>
-        <h3>Min Temperature: {temp_min}°</h3>
-        <h3>Max Temperature: {temp_max}°</h3>
-        <h3>Humidity: {humidity}%</h3>
-        <h3>Wind: {speed} m/s, {deg}°</h3>
+        <div className='inner'>
+
+        <div className='attri'>   <img src={tempimg}></img>   <h3>{temp}°</h3></div>
+        <div className='attri'>   <img src={mintemp}></img> <h3>{temp_min}°</h3></div>
+        <div className='attri'>   <img src={maxtemp}></img> <h3>{temp_max}°</h3></div>
+        <div className='attri'>   <img src={humidityimg} style={{width:'25px', height:'25px', marginLeft:'10px'}}></img><h3> {humidity}%</h3></div>
+        <div className='attri'>   <img src={windimg}></img><h3> {speed} m/s, {deg}°</h3></div>
         </div>
       </div>
     </div>

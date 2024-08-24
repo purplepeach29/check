@@ -18,18 +18,18 @@
   margin-bottom: 15px;
   position: relative;
   z-index: 2;
-  color: white;
+  color: black;
 }
 .weather-form .search-bar {
   border: none;
   padding: 10px 11px;
   background-color: transparent;
-  color: rgb(250, 246, 246);
-  border-bottom: 1px solid white;
+  color: black(250, 246, 246);
+  border-bottom: 1px solid black;
   font-size: 16px;
 }
 .weather-form .search-bar::placeholder {
-  color: white;
+  color: black;
 }
 .search-bar:focus {
   outline: none;
@@ -92,9 +92,11 @@
 {
   border-radius: 30px;
   background-color: transparent;
+  color: #0f5086;
   width: 20px;
+  height: fit-content;
   text-align: center;
-  margin: 7px;
+  margin: 12px;
 }
 
 .clear:hover
@@ -105,9 +107,15 @@
   margin: 0 0px;
 }
 
+img
+{
+  width: 40px;
+  height: 40px;
+}
 .weather-details
 {
   margin-left: 0px;
+  width: 100%;
 }
 .weather-forecast {
   margin: 20px 0;
@@ -124,8 +132,34 @@
 .weather-summary
 {
   display:flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  
+}
+.inner
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
+.attri
+{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 70%;
+}
+h3 > img{
+  margin-right: 10%;
+}
+
+.inner > h3{
+  margin:0px;
 }
 .box, .layout 
 {
@@ -141,11 +175,14 @@
   margin-left: auto;
   width: 40%;
   background-color:#0a2f4e96;
+  box-shadow: 4px -5px 10px 2px #0a2f4e;
+  
 }
 
 .forecast-day {
   margin: 7px;
   display: flex;
+  padding: 10px;
   justify-content: space-evenly;
   background-color: rgb(117 170 215 / 53%);
   border-radius: 10px;
@@ -153,10 +190,10 @@
   width: 80%;
 }
 
-/*.forecast-day > h3, .forecast-day > p {
+.forecast-day > h3, .forecast-day > p {
   margin-top: 0px;
   margin-bottom: 0px;
-}*/
+}
 
 .error {
   color: red;

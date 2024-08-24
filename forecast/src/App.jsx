@@ -124,17 +124,17 @@ const display = city? city.toLocaleUpperCase()+ ", "+country: '';
         <h2>WASSERFORECAST</h2>
       </div>
       <div className='layout'>
-      <div className='form'>
-        <div className='box'>
-        <WeatherForm onSearch={fetchWeather} onUnitChange= {setUnit}/>     
-        <button className='clear' onClick={handleClear}>X</button> 
+        <div className='form'>
+          <div className='box'>
+          <WeatherForm onSearch={fetchWeather} onUnitChange= {setUnit}/>     
+          <button className='clear' onClick={handleClear}>X</button> 
+          </div>
+          
+          <h2 className='place'>{display}</h2>
+
+          <WeatherDetails weather={weather} wind={wind}/>
+
         </div>
-        
-        <h2 className='place'>{display}</h2>
-
-        <WeatherDetails weather={weather} wind={wind}/>
-
-      </div>
 
       {error && <p className="error">{error}</p>}      
       
