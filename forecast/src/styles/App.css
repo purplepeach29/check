@@ -167,6 +167,19 @@ h3 > img{
 .inner > h3{
   margin:0px;
 }
+.humidity
+{
+  width:23px;
+  height:23px;
+  margin-left:10px; 
+  margin-right:5px;
+}
+
+.wind
+{
+  width:37px;
+  height:37px;
+}
 .box, .layout 
 {
   display: flex;
