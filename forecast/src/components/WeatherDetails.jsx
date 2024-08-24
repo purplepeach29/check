@@ -30,35 +30,12 @@ const WeatherDetails = ({ weather, wind }) => {
         <div className='inner'>
 
         <div className='attri'>   
-          <div className='weather-attri'>
-            <img src={tempimg}></img>   <h3>Temp:</h3>
-          </div>
-          <h3>{temp}°</h3>
-        </div>
+          <div className='weather-attri'><img src={tempimg}/>   <h3>Temp:</h3> </div><h3>{temp}°</h3></div>
         <div className='attri'>   
-          <div className='weather-attri'>
-            <img src={mintemp}></img> <h3>Min. Temp:</h3>
-          </div>
-          <h3>{temp_min}°</h3>
-        </div>
-        <div className='attri'>   
-          <div className='weather-attri'>
-            <img src={maxtemp}></img> <h3>Max Temp:</h3>
-          </div>
-          <h3>{temp_max}°</h3>
-        </div>
-        <div className='attri'>  
-           <div className='weather-attri'>
-             <img src={humidityimg} style={{width:'25px', height:'25px', marginLeft:'10px'}}> </img><h3> Humidity:</h3>
-           </div>
-            <h3>{humidity}%</h3>
-        </div>
-        <div className='attri'>   
-          <div className='weather-attri'>
-            <img src={windimg}></img><h3>Wind: </h3>
-            </div>
-            <h3>{speed} m/s, {deg}°</h3>
-          </div>
+          <div className='weather-attri'><img src={mintemp}/> <h3>Min. Temp:</h3></div><h3>{temp_min}°</h3></div>
+        <div className='attri'><div className='weather-attri'><img src={maxtemp}/> <h3>Max Temp:</h3></div><h3>{temp_max}°</h3></div>
+        <div className='attri'><div className='weather-attri'><img src={humidityimg} style={{width:'25px', height:'25px', marginLeft:'10px'}}/> <h3> Humidity:</h3></div><h3>{humidity}%</h3></div>
+        <div className='attri'><div className='weather-attri'><img src={windimg}/><h3>Wind: </h3></div><h3>{speed} m/s, {deg}°</h3></div>
         </div>
       </div>
     </div>
