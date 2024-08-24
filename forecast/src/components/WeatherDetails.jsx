@@ -45,7 +45,7 @@ const WeatherDetails = ({ weather, wind }) => {
     <div className="weather-details">
       <h2> Today</h2>
       <div className="weather-summary">
-        <img src={`http://openweathermap.org/img/wn/${icon}.png`} alt={main} />
+        <img src={`http://openweathermap.org/img/wn/${icon}.png`} alt={main} className='rotate linear infinite'/>
         <h3>{main}</h3>
         <div className='inner'>
 
